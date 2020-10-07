@@ -271,7 +271,7 @@ async def youtube_dl_call_back(bot, update):
                     chat_id=update.message.chat.id,
                     document=download_directory,
                     thumb=thumb_image_path,
-                    caption=description,
+                    caption=f"<b>{file_name}\n\nShare and Support\n\n@SerialCoIn</b>,
                     parse_mode="HTML",
                     # reply_markup=reply_markup,
                     reply_to_message_id=update.message.reply_to_message.message_id,
@@ -301,7 +301,7 @@ async def youtube_dl_call_back(bot, update):
                 await bot.send_video(
                     chat_id=update.message.chat.id,
                     video=download_directory,
-                    caption=description,
+                    caption=f"<b>{file_name}\n\nShare and Support\n\n@SerialCoIn</b>,
                     parse_mode="HTML",
                     duration=duration,
                     width=width,
@@ -325,7 +325,7 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @MoVieZonLyheRe"
+                caption = "© @SerialCoIn"
                 if is_w_f:
                     caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
                 for image in images:
