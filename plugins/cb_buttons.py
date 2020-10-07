@@ -78,7 +78,7 @@ async def button(bot, update):
                 start_time = time.time()
                 await bot.send_document(
                     chat_id=update.message.chat.id,
-                    document=current_file_name,
+                    document=<b>current_file_name</b>,
                     # thumb=thumb_image_path,
                     caption=file_content,
                     # reply_markup=reply_markup,
