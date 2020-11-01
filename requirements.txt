@@ -7,5 +7,5 @@ Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 requests
 tgcrypto
-git+git://github.com/AsuranJ/YouTube-dl/
-#git+git://github.com/AsuranJ/yudl
+#git+git://github.com/AsuranJ/YouTube-dl/
+git+git://github.com/AsuranJ/youtube-dl-2
