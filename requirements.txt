@@ -10,4 +10,5 @@ tgcrypto
 #git+git://github.com/AsuranJ/YouTube-dl/
 #git+git://github.com/AsuranJ/youtube-dl-2
 #git+git://github.com/AsuranJ/Asuran
-git+git://github.com/nao20010128nao/ytdl-patched
+#git+git://github.com/nao20010128nao/ytdl-patched
+youtube-dl
