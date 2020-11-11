@@ -8,4 +8,5 @@ https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 requests
 tgcrypto
 ffmpeg
-git+git://github.com/AsuranJ/Asuran
+#git+git://github.com/AsuranJ/Asuran
+git+git://github.com/catzcod/youtube-dl
