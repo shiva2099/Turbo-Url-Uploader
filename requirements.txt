@@ -9,4 +9,5 @@ requests
 tgcrypto
 ffmpeg
 #git+git://github.com/AsuranJ/Asuran
-git+git://github.com/catzcod/youtube-dl
+#git+git://github.com/catzcod/youtube-dl
+git+git://github.com/l1ving/youtube-dl
