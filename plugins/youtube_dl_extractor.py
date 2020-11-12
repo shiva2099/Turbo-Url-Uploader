@@ -19,10 +19,14 @@ import os
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from sample_config import (
-    DEF_THUMB_NAIL_VID_S
-)
+# the secret configuration specific things
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
 
+# the Strings used for this "thing"
+from translation import Translation
 
 async def extract_youtube_dl_formats(url, cf_name, yt_dl_user_name, yt_dl_pass_word, user_working_dir):
     command_to_exec = [
