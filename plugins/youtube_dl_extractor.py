@@ -16,7 +16,7 @@ import asyncio
 from helper_funcs.display_progress import humanbytes
 import json
 import os
-import pyrogram.types as pyrogram
+import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from sample_config import (
