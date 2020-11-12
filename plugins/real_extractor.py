@@ -14,8 +14,8 @@ LOGGER = logging.getLogger(__name__)
 import os
 
 #from import (
-    REAL_DEBRID_KEY
-)
+    #REAL_DEBRID_KEY
+#)
 
 
 import aiohttp
