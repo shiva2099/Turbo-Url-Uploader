@@ -19,7 +19,7 @@ import os
 import pyrogram.types as pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from sample_config from import (
+from sample_config import config (
     DEF_THUMB_NAIL_VID_S
 )
 
