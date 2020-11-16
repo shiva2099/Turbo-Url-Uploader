@@ -3,7 +3,7 @@
 # (c) Shrimadhav U K
 
 # the logging things
-import logging
+import loggin
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -200,7 +200,7 @@ async def youtube_dl_call_back(bot, update):
                 is_w_f,
                 Config.DEF_WATER_MARK_FILE,
                 300,
-                1
+                9
             )
             logger.info(images)
             await bot.edit_message_text(
@@ -325,7 +325,7 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @SerialCoIn"
+                caption = "© @MoVieZonLyheRe"
                 if is_w_f:
                     caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
                 for image in images:
