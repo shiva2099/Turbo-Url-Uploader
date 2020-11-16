@@ -26,7 +26,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+from translation1 import Translation
 
 async def extract_youtube_dl_formats(url, cf_name, yt_dl_user_name, yt_dl_pass_word, user_working_dir):
     command_to_exec = [
