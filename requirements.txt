@@ -7,10 +7,8 @@ Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 requests
 tgcrypto
-ffmpeg
 hurry.filesize
 #git+git://github.com/AsuranJ/Asuran
 #git+git://github.com/catzcod/youtube-dl
-#git+git://github.com/l1ving/youtube-dl
-youtube_dl
+git+git://github.com/l1ving/youtube-dl
 
