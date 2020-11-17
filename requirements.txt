@@ -9,5 +9,5 @@ requests
 tgcrypto
 hurry.filesize
 #git+git://github.com/ytdl-org/youtube-dl
-git+git://github.com/l1ving/youtube-dl
+git+git://github.com/nao20010128nao/ytdl-patched
 
