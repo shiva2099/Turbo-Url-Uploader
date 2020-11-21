@@ -28,8 +28,8 @@ async def handler(event):
     r1 = requests.get(urls.search_api_endpoint + w,headers=headers, params={"translation":"en", "country":"IN"}).json()
     g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
    # await client.send_file(chat,r1["image_url"],caption = r1["title"])
-    markup = client.build_reply_markup(Button.url("stream",urls.stream_baseurl+g1))
-    await client.send_message(chat, "support @urlicupload    "+" TITLE:"+r1["title"]+"   DESCRIPTION:"+r1["description"],file=r1["image_url"], buttons=markup)
+    markup = client.build_reply_markup(Button.url("Zee Stream",urls.stream_baseurl+g1))
+    await client.send_message(chat, "Support <b>@SerialCoIn & @urlicupload</b>/n/n"+" <b>🎥</b>" +r1["title"]+"/n/n<b>📑</b> "+r1["description"],file=r1["image_url"], buttons=markup)
             
             #rgx = w
    # await client.send_message(chat, g1)
@@ -41,8 +41,8 @@ async def handler(event):
     video_d = "https://llvod.mxplay.com/"
     A =requests.get("https://api.mxplay.com/v1/web/detail/video?type=movie&id="+link+"&platform=com.mxplay.desktop&device-density=2&userid=30bb09af-733a-413b-b8b7-b10348ec2b3d&platform=com.mxplay.mobile&content-languages=hi,en,ta").json()
     chat = await event.get_chat()
-    markup = client.build_reply_markup(Button.url("stream",video_d+A["stream"]['hls']['high']))
-    await client.send_message(chat," support @urlicupload   "+A["title"],buttons=markup)
+    markup = client.build_reply_markup(Button.url("Mx Stream",video_d+A["stream"]['hls']['high']))
+    await client.send_message(chat," Support @SerialCoIn & @urlicupload "+A["title"],buttons=markup)
     print(A)
     print(link)
  
