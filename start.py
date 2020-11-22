@@ -9,7 +9,7 @@ client = TelegramClient('anfghohn', int(os.environ.get("APP_ID" )), os.environ.g
 @client.on(events.NewMessage(pattern='/start'))
 async def handler(event):
     chat = await event.get_chat()
-    await client.send_message(chat,"""💁hey i am created by infinitrocyber subscribe my channel https://m.youtube.com/channel/UCLHZQApnu1vN2j7fKDgv74w 👍👍👍👍👍👍
+    await client.send_message(chat,"""💁Hey i am created by infinitrocyber subscribe my channel https://m.youtube.com/channel/UCLHZQApnu1vN2j7fKDgv74w 👍👍👍👍👍👍
     i support zee5 and mx player-movies full mx player later develop send me mx players like https://www.mxplayer.in/movie/ba472677b661a6d09ab73f47d33c0c90 """)
     
 
@@ -29,7 +29,7 @@ async def handler(event):
     g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
    # await client.send_file(chat,r1["image_url"],caption = r1["title"])
     markup = client.build_reply_markup(Button.url("Zee Stream",urls.stream_baseurl+g1))
-    await client.send_message(chat, "Support @SerialCoIn & @urlicupload\n\n"+" 🎥" +r1["title"]+"\n\n📑 "+r1["description"],file=r1["image_url"], buttons=markup)
+    await client.send_message(chat, "Support @SerialCoIn & @urlicupload\n\n"+" 🎥 " +r1["<b>title</b>"]+"\n\n📑 "+r1["description",\n\n<b>Tap this Button to Stream it with Different Qualities for Free 👇</b>],file=r1["image_url"], buttons=markup)
             
             #rgx = w
    # await client.send_message(chat, g1)
