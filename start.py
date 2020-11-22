@@ -9,8 +9,7 @@ client = TelegramClient('anfghohn', int(os.environ.get("APP_ID" )), os.environ.g
 @client.on(events.NewMessage(pattern='/start'))
 async def handler(event):
     chat = await event.get_chat()
-    await client.send_message(chat,"""💁Hey i am created by infinitrocyber subscribe my channel https://m.youtube.com/channel/UCLHZQApnu1vN2j7fKDgv74w 👍👍👍👍👍👍
-    i support zee5 and mx player-movies full mx player later develop send me mx players like https://www.mxplayer.in/movie/ba472677b661a6d09ab73f47d33c0c90 """)
+    await client.send_message(chat,"""Hai I'm Asuran.. This Bot Work Dual Purpose YouTube downloader and Zee5 and mx videos Streamer..Premiem Support Not DRM """)
     
 
 @client.on(events.NewMessage(pattern='(?i)https://www.zee5.com'))
