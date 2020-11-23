@@ -29,8 +29,7 @@ async def handler(event):
     g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
    # await client.send_file(chat,r1["image_url"],caption = r1["title"])
     markup = client.build_reply_markup(Button.url("stream",urls.stream_baseurl+g1))
-    await client.send_message(chat, "support @urlicupload    "+" TITLE:"+r1["title"]+"   DESCRIPTION:"+r1["description"],file=r1["image_url"], buttons=markup)
-            
+        await client.send_message(chat, "Support @SerialCoIn & @urlicupload\n\n"+"🎥 "+r1["title"]+"\n\n📑 "+r1["description"],file=r1["image_url"], buttons=markup)      
             #rgx = w
    # await client.send_message(chat, g1)
    #await client.send_message(chat,"445")
