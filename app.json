@@ -76,10 +76,6 @@
     "worker": {
       "quantity": 1,
       "size": "free"
-"formation": {
-    "worker1": {
-      "quantity": 1,
-      "size": "free"
     }
   }
 }
