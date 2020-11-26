@@ -43,6 +43,7 @@ async def handler(event):
     await client.send_message(chat," support @urlicupload   "+A["title"],buttons=markup)
     print(A)
     print(link)
+
 @client.on(events.NewMessage(pattern='(?i)https://www.hotstar.com/in/'))
 async def handler(event):
     link =event.text
@@ -56,24 +57,45 @@ async def handler(event):
     )
     await client.send_message(chat,result)
     
-@client.on(events.NewMessage(pattern='(?i)/ls'))
+@client.on(events.NewMessage(pattern='(?i)/ytdl'))
 async def handler(event):
-    link =event.text.split(" ")[1]
-    e = os.listdir(link)
+    sender = await event.get_sender()
     chat = await event.get_chat()
-    c = "|"
-    #str1.join(s)
-    #print(c)
-    await client.send_message(chat,c.join(e))
-@client.on(events.NewMessage(pattern='(?i)sm'))
-async def handler(event):
-    link =event.text.split(" ")[1]
-    print(link)
-    chat = await event.get_chat()
-    await client.send_file(chat, '/plugins'+link,force_document=True)
-    
-    
-    
-    
-client.start()
-client.run_until_disconnected()
+    link =event.text.split(' ')[1]
+    links =event.text.split(' ')[2]
+    if os.path.exists(sender.username):
+    #os.makedirs(sender.username)
+        ydl = YoutubeDL({'outtmpl':sender.username+"/"+links,'add-header':"kaios/2.0"})
+        info = ydl.extract_info(link, download=True)
+        print(info['title'])
+        e = os.listdir("/app/"+sender.username+"/")
+        filepath = "/app/"+sender.username+"/"
+        #async for filepath in e:
+        c = ""
+        await client.send_message(chat, info['title'])
+        await client.send_file(chat,"/app/"+sender.username+"/"+c.join(e),force_document=True)
+        
+        path = os.path.join("/app/"+sender.username+"/",c.join(e))
+        os.remove(path)  
+    if not os.path.exists(sender.username):
+        os.makedirs(sender.username)
+        ydl = YoutubeDL({'outtmpl':sender.username+"/"+links,'add-header':"kaios/2.0"})
+        info = ydl.extract_info(link, download=True)
+        print(info['title'])
+        e = os.listdir("/app/"+sender.username+"/")
+        filepath = "/app/"+sender.username+"/"
+        #async for filepath in e:
+        c = ""
+        await client.send_message(chat, info['title'])
+        #await client.send_file(chat,"/app/"+sender.username+"/"+c.join(e),force_document=True)
+        
+        path = os.path.join("/app/"+sender.username+"/",c.join(e))
+        
+        if len(e)>0:
+            try:
+                await client.send_file(chat,"/app/"+sender.username+"/"+c.join(e),force_document=True)
+        
+            except:
+                pass
+        await client.send_message(chat,"sm "+"/app/"+sender.username+"/"+c.join(e))
+        os.remove(path)
